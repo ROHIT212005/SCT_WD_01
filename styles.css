@@ -1,0 +1,105 @@
+/* Reset styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: #87CEEB; /* Sky blue */
+    color: white;
+}
+
+/* Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Menu styles */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 0;
+}
+.menu li {
+    margin: 0 15px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+.menu a:hover {
+    color: #ff6600; 
+    transform: scale(1.1);
+}
+
+/* Scenery layers */
+.scenery {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: move 15s linear infinite;
+}
+.layer.sky {
+    background: linear-gradient(to bottom, #87CEEB, #FFD700);
+    z-index: 1;
+}
+.layer.mountains {
+    background-image: url('mountain.jpg'); /* Replace with a scenic image */
+    bottom: 0;
+    z-index: 2;
+    animation-duration: 20s;
+}
+.layer.trees {
+    background-image: url('trees.jpg'); /* Replace with a scenic image */
+    bottom: 0;
+    z-index: 3;
+    animation-duration: 25s;
+}
+.layer.ground {
+    background-image: url('ground.jpg'); /* Replace with a scenic image */
+    bottom: 0;
+    z-index: 4;
+    animation-duration: 30s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Section styles */
+section {
+    padding: 100px;
+    height: 100vh;
+    text-align: center;
+}
+#home { background: rgba(255, 255, 255, 0.7); color: #333; }
+#about { background: rgba(200, 200, 200, 0.7); color: #333; }
+#services { background: rgba(150, 150, 150, 0.7); color: #333; }
+#contact { background: rgba(100, 100, 100, 0.7); color: #333; }
