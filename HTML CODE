@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenery Animation Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="scenery">
+        <div class="layer sky"></div>
+        <div class="layer mountains"></div>
+        <div class="layer trees"></div>
+        <div class="layer ground"></div>
+    </div>
+
+    <section id="home">Welcome to the Scenic Home</section>
+    <section id="about">Learn About the Scenery</section>
+    <section id="services">Our Scenic Services</section>
+    <section id="contact">Get in Touch</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
